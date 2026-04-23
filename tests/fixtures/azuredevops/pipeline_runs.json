@@ -1,0 +1,17 @@
+{
+  "count": 2,
+  "value": [
+    {
+      "id": 301,
+      "result": "succeeded",
+      "finishedDate": "2026-04-22T13:00:00Z",
+      "_links": {"web": {"href": "https://dev.azure.com/acme/demo/_build/results?buildId=301"}}
+    },
+    {
+      "id": 302,
+      "result": "failed",
+      "finishedDate": "2026-04-21T09:00:00Z",
+      "_links": {"web": {"href": "https://dev.azure.com/acme/demo/_build/results?buildId=302"}}
+    }
+  ]
+}

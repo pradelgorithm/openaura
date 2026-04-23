@@ -1,0 +1,20 @@
+[
+  {
+    "sha": "a1b2c3d4e5f6abcdef0123456789abcdef012345",
+    "html_url": "https://github.com/openaura/openaura/commit/a1b2c3d",
+    "commit": {
+      "author": {"name": "alice", "date": "2026-04-22T14:30:10Z"},
+      "message": "feat: retry logic\n\nlonger body here"
+    },
+    "author": {"login": "alice"}
+  },
+  {
+    "sha": "bbbbcccc00000000000000000000000000000000",
+    "html_url": "https://github.com/openaura/openaura/commit/bbbbccc",
+    "commit": {
+      "author": {"name": "bob", "date": "2026-04-20T09:15:20Z"},
+      "message": "docs: trigger modes"
+    },
+    "author": {"login": "bob"}
+  }
+]

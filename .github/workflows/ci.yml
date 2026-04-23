@@ -1,0 +1,89 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  merge_group:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint-type-test:
+    name: Lint, type-check, test (Python ${{ matrix.python-version }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.12", "3.13", "3.14"]
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683  # v4.2.2
+      - uses: actions/setup-python@0b93645e9fea7318ecaed2b359559ac225c90a2b  # v5.3.0
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+      - name: Install package + dev extras
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e ".[dev]"
+      - name: Ruff lint
+        run: python -m ruff check .
+      - name: Ruff format check
+        run: python -m ruff format --check .
+      - name: Mypy
+        run: python -m mypy openaura
+      - name: Bandit
+        run: python -m bandit -r openaura -ll
+      - name: Pytest
+        run: python -m pytest --cov=openaura --cov-report=xml --cov-fail-under=80
+
+  audit:
+    name: pip-audit
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683  # v4.2.2
+      - uses: actions/setup-python@0b93645e9fea7318ecaed2b359559ac225c90a2b  # v5.3.0
+        with:
+          python-version: "3.11"
+      - name: Install package
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -e ".[dev]"
+      - name: pip-audit
+        run: python -m pip_audit --skip-editable --ignore-vuln GHSA-placeholder
+
+  package-deploy-check:
+    name: Package deploy check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683  # v4.2.2
+      - uses: actions/setup-python@0b93645e9fea7318ecaed2b359559ac225c90a2b  # v5.3.0
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Build release artifacts
+        run: |
+          python -m pip install --upgrade pip build twine
+          python -m build
+          python -m twine check dist/*
+      - name: Smoke test wheel install
+        run: |
+          python -m venv .venv-smoke
+          . .venv-smoke/bin/activate
+          python -m pip install --upgrade pip
+          python -m pip install dist/*.whl
+          python -m pip check
+          aura --help
+          aura manifesto > /tmp/aura-manifesto.md
+          test -s /tmp/aura-manifesto.md
+      - uses: actions/upload-artifact@b4b15b8c7c6ac21ea08fcf65892d2ee8f75cf882  # v4.4.3
+        with:
+          name: dist-${{ github.sha }}
+          path: dist/

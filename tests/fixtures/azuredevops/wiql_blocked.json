@@ -1,0 +1,6 @@
+{
+  "queryType": "flat",
+  "workItems": [
+    {"id": 2001, "url": "https://dev.azure.com/acme/demo/_apis/wit/workItems/2001"}
+  ]
+}

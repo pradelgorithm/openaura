@@ -1,0 +1,20 @@
+[
+  {
+    "number": 301,
+    "title": "Timeout on long runs",
+    "html_url": "https://github.com/openaura/openaura/issues/301",
+    "state": "closed",
+    "closed_at": "2026-04-21T11:00:00Z",
+    "labels": [{"name": "bug"}],
+    "assignee": {"login": "alice"}
+  },
+  {
+    "number": 302,
+    "title": "PR as issue placeholder",
+    "html_url": "https://github.com/openaura/openaura/pull/302",
+    "state": "closed",
+    "closed_at": "2026-04-22T10:00:00Z",
+    "labels": [],
+    "pull_request": {"url": "https://api.github.com/repos/openaura/openaura/pulls/302"}
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "count": 3,
+  "workItemRelations": [
+    {"rel": null, "source": null, "target": {"id": 1001}},
+    {"rel": null, "source": null, "target": {"id": 1002}},
+    {"rel": null, "source": null, "target": {"id": 1003}}
+  ]
+}

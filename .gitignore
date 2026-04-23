@@ -1,0 +1,32 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+*.egg
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+dist/
+build/
+.tox/
+.cache/
+
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# AURA briefs — user repos commit these back to source control; this repo's own
+# briefs (if any) should be ignored during development.
+/aura-docs/
+
+# Local env files
+.env
+.env.*
+!.env.example

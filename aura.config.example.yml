@@ -1,0 +1,42 @@
+# AURA configuration — copy to aura.config.yml at the root of your repo and edit.
+# Secrets belong in CI env vars. This file only holds the env var *names*.
+
+project: "my-project"
+
+# weekly | on-merge | both
+trigger: weekly
+schedule: "friday-5pm"     # documentation only — the real cron lives in your CI workflow
+
+# Pydantic AI model string. OpenAURA uses the same typed output schemas for
+# Anthropic and OpenAI responses.
+# - Anthropic: set ANTHROPIC_API_KEY in CI
+# - OpenAI: set OPENAI_API_KEY in CI
+model: "anthropic:claude-sonnet-4-6"
+# model: "openai:gpt-5.2"
+
+signals:
+  # Enable at least one source. Remove a block to disable that connector.
+  github:
+    repo: "owner/repository"
+    token_env: GITHUB_TOKEN
+    default_branch: main
+
+  # azuredevops:
+  #   org_env: AZURE_DEVOPS_ORG
+  #   project_env: AZURE_DEVOPS_PROJECT
+  #   token_env: AZURE_DEVOPS_TOKEN
+  #   team: "My Team"
+  #   repos:
+  #     - backend
+  #     - frontend
+
+kpis:
+  - throughput
+  - cycle_time
+  - blockers
+  - bug_count
+
+custom_kpis: []
+
+output:
+  folder: "aura-docs"        # where weekly briefs are written (relative to repo root)

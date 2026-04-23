@@ -1,0 +1,25 @@
+{
+  "count": 2,
+  "value": [
+    {
+      "id": 1001,
+      "fields": {
+        "System.Id": 1001,
+        "System.Title": "Wire auth middleware",
+        "System.WorkItemType": "User Story",
+        "System.AssignedTo": {"displayName": "Alice"},
+        "System.ChangedDate": "2026-04-22T10:00:00Z"
+      }
+    },
+    {
+      "id": 1002,
+      "fields": {
+        "System.Id": 1002,
+        "System.Title": "Fix memory leak in worker",
+        "System.WorkItemType": "Bug",
+        "System.AssignedTo": {"displayName": "Bob"},
+        "System.ChangedDate": "2026-04-21T16:00:00Z"
+      }
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "count": 1,
+  "value": [
+    {
+      "id": "iter-42",
+      "name": "Sprint 42",
+      "path": "demo\\Iteration\\Sprint 42",
+      "attributes": {
+        "startDate": "2026-04-14T00:00:00Z",
+        "finishDate": "2026-04-27T00:00:00Z",
+        "timeFrame": "current"
+      }
+    }
+  ]
+}

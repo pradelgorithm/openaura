@@ -1,0 +1,12 @@
+{
+  "count": 1,
+  "value": [
+    {
+      "pullRequestId": 77,
+      "title": "Refactor pipeline runner",
+      "createdBy": {"displayName": "Alice"},
+      "closedDate": "2026-04-22T12:00:00Z",
+      "labels": [{"name": "infra"}]
+    }
+  ]
+}

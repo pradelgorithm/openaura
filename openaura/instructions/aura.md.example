@@ -1,0 +1,48 @@
+# Project Context for AURA
+
+> Copy this file to your repo root as `aura.md` and edit it. It is loaded as runtime
+> context for every AURA brief. It shapes tone and priorities but cannot override the
+> core AURA rules (evidence first, no fabrication, no hidden blockers).
+
+## Project
+
+**Name:** My Project
+**One-liner:** What this project does, in one sentence.
+
+## Team
+
+- Alice — tech lead
+- Bob — backend
+- Carol — frontend
+- Dave — product
+
+## Current focus
+
+**Sprint goal:** Ship the new checkout flow behind a feature flag by end of sprint.
+
+**What matters this week:**
+- Merge auth migration PRs
+- Close P1 bugs filed against v2.4
+- Finalize design review for the mobile view
+
+## KPIs and targets
+
+| KPI | Target | Why |
+|---|---|---|
+| throughput | ≥ 8 merged PRs/week | Sustains sprint commitment |
+| cycle_time | ≤ 3 days median | Keeps feedback loops tight |
+| bug_count | ≤ 5 open P1/P2 | Quality bar for release |
+| blockers | 0 | Anything else is worth flagging |
+
+## Custom rules
+
+- Any PR open more than 3 days is a risk — call it out.
+- A failed main-branch pipeline is always a risk, regardless of KPIs.
+- Dependabot PRs don't count toward throughput.
+
+## Output preferences
+
+- Tone: concise, assume the reader knows the project.
+- In the Slack post, always call out pipeline failures in the first 3 lines.
+- In the markdown brief, include a "Decisions needed" section even if empty (write
+  `Nothing to report this period.` if so).

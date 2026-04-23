@@ -1,0 +1,30 @@
+schedules:
+  - cron: "0 17 * * 5"
+    displayName: AURA Friday Brief
+    branches:
+      include: [main]
+    always: true
+
+trigger: none
+pr: none
+
+variables:
+  - group: aura-secrets   # Variable Group in ADO Library holding the secrets below
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+  - task: UsePythonVersion@0
+    inputs:
+      versionSpec: "3.11"
+  - script: python -m pip install open-aura
+    displayName: Install AURA
+  - script: aura run
+    displayName: Run AURA
+    env:
+      ANTHROPIC_API_KEY: $(ANTHROPIC_API_KEY)
+      OPENAI_API_KEY: $(OPENAI_API_KEY)
+      AZURE_DEVOPS_TOKEN: $(AZURE_DEVOPS_TOKEN)
+      AZURE_DEVOPS_ORG: $(AZURE_DEVOPS_ORG)
+      AZURE_DEVOPS_PROJECT: $(AZURE_DEVOPS_PROJECT)

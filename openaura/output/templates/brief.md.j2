@@ -1,0 +1,95 @@
+---
+project: {{ project }}
+period: {{ period_start }} → {{ period_end }}
+generated: {{ generated_at }}
+confidence: {{ confidence }}
+---
+
+# {{ project }} — Weekly Brief
+
+**{{ period_start }} → {{ period_end }}** · confidence `{{ confidence }}` · generated {{ generated_at }}
+
+## Executive summary
+
+{{ executive_summary }}
+
+## Sprint activity
+
+{{ sprint_activity }}
+
+## KPI scorecard
+
+| KPI | Value | Target | Trend | Confidence | Note |
+|---|---|---|---|---|---|
+{% for score in kpi_scorecard.scores -%}
+| {{ score.name }} | {{ score.value if score.value is not none else "—" }} | {{ score.target if score.target is not none else "—" }} | {{ score.trend }} | {{ score.confidence }} | {{ score.note or "" }} |
+{% endfor %}
+
+## Findings
+
+{% if findings %}
+{% for item in findings -%}
+- {{ item }}
+{% endfor %}
+{% else %}
+Nothing to report this period.
+{% endif %}
+
+## Risks and blockers
+
+{% if risks_and_blockers %}
+{% for risk in risks_and_blockers %}
+### {{ risk.title }} — `{{ risk.severity }}`
+
+{{ risk.description }}
+
+{% if risk.evidence -%}
+**Evidence:**
+{% for link in risk.evidence -%}
+- [{{ link.label }}]({{ link.url }}) ({{ link.source }})
+{% endfor %}
+{%- endif %}
+{% endfor %}
+{% else %}
+Nothing to report this period.
+{% endif %}
+
+## Decisions needed
+
+{% if decisions_needed %}
+{% for item in decisions_needed -%}
+- {{ item }}
+{% endfor %}
+{% else %}
+Nothing to report this period.
+{% endif %}
+
+## Next focus
+
+{% if next_focus %}
+{% for item in next_focus -%}
+- {{ item }}
+{% endfor %}
+{% else %}
+Nothing to report this period.
+{% endif %}
+
+## Evidence trail
+
+{% if evidence %}
+{% for link in evidence -%}
+- [{{ link.label }}]({{ link.url }}) ({{ link.source }})
+{% endfor %}
+{% else %}
+Nothing to report this period.
+{% endif %}
+
+{% if connector_warnings %}
+---
+
+## ⚠️ Connector warnings
+
+{% for warning in connector_warnings -%}
+- {{ warning }}
+{% endfor %}
+{% endif %}

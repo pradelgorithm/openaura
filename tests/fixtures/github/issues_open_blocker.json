@@ -1,0 +1,10 @@
+[
+  {
+    "number": 311,
+    "title": "Production DB migration blocked on review",
+    "html_url": "https://github.com/openaura/openaura/issues/311",
+    "state": "open",
+    "created_at": "2026-04-18T09:00:00Z",
+    "labels": [{"name": "blocker"}]
+  }
+]

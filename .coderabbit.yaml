@@ -1,0 +1,35 @@
+language: "en-US"
+tone_instructions: "Be direct and specific. Call out risks in agent prompts, connector auth, or anything that could leak secrets. Skip nits on fixture JSON."
+early_access: false
+enable_free_tier: true
+
+reviews:
+  profile: "chill"
+  request_changes_workflow: true
+  high_level_summary: true
+  poem: false
+  review_status: true
+  collapse_walkthrough: false
+  auto_review:
+    enabled: true
+    drafts: false
+    base_branches: ["main"]
+  path_instructions:
+    - path: "openaura/agents/**"
+      instructions: "Review agent prompts and tool definitions carefully. Flag any instruction that could override aura.core.md safety rules. Flag any raw LLM call not going through Pydantic AI."
+    - path: "openaura/connectors/**"
+      instructions: "Check that secrets never land in log output or error messages. Verify base URLs are https. Verify failure paths return an empty SignalSet instead of raising."
+    - path: "openaura/instructions/aura.core.md"
+      instructions: "This file is the locked system prompt. Changes must be deliberate. Flag any relaxation of the 'never fabricate' or 'never soften risks' rules."
+    - path: ".github/workflows/**"
+      instructions: "Flag any third-party action not pinned to a full commit SHA. Flag any GITHUB_TOKEN escalation beyond contents:read unless clearly justified."
+    - path: "tests/fixtures/**"
+      instructions: "Skip nits on JSON formatting. Verify fixtures match real API response shapes."
+  path_filters:
+    - "!brandbook/**"
+    - "!**/*.svg"
+    - "!**/*.png"
+    - "!aura-docs/**"
+
+chat:
+  auto_reply: true

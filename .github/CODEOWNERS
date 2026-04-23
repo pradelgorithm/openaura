@@ -1,0 +1,8 @@
+# Default owner for everything.
+*                                              @pradelgorithm
+
+# Locked files — require maintainer review explicitly.
+/openaura/instructions/aura.core.md            @pradelgorithm
+/.github/workflows/                            @pradelgorithm
+/pyproject.toml                                @pradelgorithm
+/SECURITY.md                                   @pradelgorithm

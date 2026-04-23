@@ -1,0 +1,29 @@
+[
+  {
+    "number": 482,
+    "title": "Add retry logic to gatherer",
+    "html_url": "https://github.com/openaura/openaura/pull/482",
+    "state": "closed",
+    "merged_at": "2026-04-22T14:30:00Z",
+    "user": {"login": "alice"},
+    "labels": [{"name": "infra"}]
+  },
+  {
+    "number": 481,
+    "title": "Docs: clarify trigger modes",
+    "html_url": "https://github.com/openaura/openaura/pull/481",
+    "state": "closed",
+    "merged_at": "2026-04-20T09:15:00Z",
+    "user": {"login": "bob"},
+    "labels": [{"name": "documentation"}]
+  },
+  {
+    "number": 480,
+    "title": "Abandoned: old approach",
+    "html_url": "https://github.com/openaura/openaura/pull/480",
+    "state": "closed",
+    "merged_at": null,
+    "user": {"login": "carol"},
+    "labels": []
+  }
+]
