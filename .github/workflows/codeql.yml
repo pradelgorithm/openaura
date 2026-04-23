@@ -7,6 +7,7 @@ on:
     branches: [main]
   schedule:
     - cron: "37 6 * * 1"   # Mondays at 06:37 UTC
+  workflow_dispatch:
 
 permissions:
   contents: read

@@ -73,3 +73,33 @@ that is **always in scope** and qualifies for a security advisory regardless of 
 - Third-party GitHub Actions pinned to full commit SHAs.
 - PyPI releases via Trusted Publishing (OIDC) with SLSA build provenance attestations.
 - Sigstore signatures on release artifacts.
+
+## Security automation
+
+This repository keeps security automation under `.github/`:
+
+- `.github/workflows/codeql.yml` runs CodeQL on pushes to `main`, pull requests to
+  `main`, Mondays at 06:37 UTC, and manual dispatch.
+- `.github/workflows/scorecard.yml` runs OpenSSF Scorecard on pushes to `main`,
+  Tuesdays at 04:15 UTC, and manual dispatch.
+- `.github/workflows/ci.yml` runs linting, type checks, Bandit, tests, coverage,
+  dependency audit, package build, `twine check`, and install smoke testing.
+- `.github/workflows/release.yml` publishes tagged releases to PyPI via Trusted
+  Publishing, generates build provenance attestations, signs artifacts with Sigstore,
+  and creates GitHub Releases.
+- `.github/release.yml` configures GitHub's automatically generated release notes.
+- `.github/dependabot.yml` proposes dependency and GitHub Actions updates.
+
+To run either security review on demand:
+
+1. Open the repository on GitHub.
+2. Go to **Actions**.
+3. Select **CodeQL** or **OpenSSF Scorecard**.
+4. Click **Run workflow** on `main`.
+
+You can also trigger them from the GitHub CLI:
+
+```bash
+gh workflow run CodeQL --ref main
+gh workflow run "OpenSSF Scorecard" --ref main
+```
