@@ -18,7 +18,7 @@ from openaura.manifesto import load_manifesto
 from openaura.models.config import AuraConfig, Trigger
 from openaura.output import markdown as md_out
 
-app = typer.Typer(add_completion=False, no_args_is_help=True, help="OpenAURA — weekly briefs.")
+app = typer.Typer(add_completion=False, no_args_is_help=True, help="Open AURA — weekly briefs.")
 log = logging.getLogger("openaura")
 
 EXIT_CONFIG = 1

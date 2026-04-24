@@ -43,7 +43,7 @@ def model_id(config_model: str) -> str:
     """Build the Pydantic AI model string.
 
     Provider-prefixed strings pass through unchanged. Bare model names remain
-    Anthropic for backwards compatibility with early OpenAURA configs.
+    Anthropic for backwards compatibility with early Open AURA configs.
     """
     if ":" in config_model:
         return config_model
@@ -58,6 +58,6 @@ def model_ref(config_model: str | Model) -> str | Model:
 
 
 def model_api_key_env_var(config_model: str) -> str | None:
-    """Return the API key env var OpenAURA can infer from a Pydantic AI model string."""
+    """Return the API key env var Open AURA can infer from a Pydantic AI model string."""
     provider = model_id(config_model).split(":", maxsplit=1)[0]
     return MODEL_PROVIDER_ENV_VARS.get(provider)

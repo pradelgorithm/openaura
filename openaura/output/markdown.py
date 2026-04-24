@@ -20,7 +20,7 @@ def _template_src() -> str:
 @lru_cache(maxsize=1)
 def _env() -> Environment:
     return Environment(
-        autoescape=False,  # nosec B701  # noqa: S701 - markdown output, not HTML
+        autoescape=True,
         trim_blocks=True,
         lstrip_blocks=True,
         undefined=StrictUndefined,

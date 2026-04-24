@@ -2,7 +2,7 @@
 
 ## Supported versions
 
-OpenAURA is pre-1.0. Only the latest minor release receives security patches.
+Open AURA is pre-1.0. Only the latest minor release receives security patches.
 
 | Version | Supported |
 |---------|-----------|
@@ -55,7 +55,7 @@ once a fix ships, crediting the reporter unless anonymity is requested.
 
 ## Secrets handling expectations
 
-OpenAURA runs in CI and reads signals from external APIs. It:
+Open AURA runs in CI and reads signals from external APIs. It:
 
 - Accepts secrets only from environment variables (never from config files).
 - Never logs secret values; tokens are redacted in error messages.
