@@ -1,6 +1,6 @@
 # AURA Manifesto
 
-Open AURA is not a framework in the heavy sense. It is an update protocol: a small,
+OpenAURA is not a framework in the heavy sense. It is an update protocol: a small,
 repeatable way for any repo to turn delivery signals into accurate project briefs.
 
 The protocol exists so teams can stop translating work into status by hand. A repo

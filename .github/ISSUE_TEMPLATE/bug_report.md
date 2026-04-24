@@ -1,6 +1,6 @@
 ---
 name: Bug report
-about: Something in Open AURA is broken
+about: Something in OpenAURA is broken
 labels: [bug]
 ---
 
