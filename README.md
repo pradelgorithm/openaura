@@ -24,7 +24,10 @@
 
 </p>
 
-<p><code>pip install open-aura</code></p>
+<p>
+<a href="https://openaura.org/">Website</a> ·
+<code>pip install open-aura</code>
+</p>
 
 <br>
 
