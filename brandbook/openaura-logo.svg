@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 160" role="img" aria-labelledby="title desc">
+  <title id="title">OpenAURA</title>
+  <desc id="desc">OpenAURA horizontal logo with aperture mark.</desc>
+  <rect width="640" height="160" fill="#FBF9F3"/>
+  <g transform="translate(48 40)" fill="none" stroke="#0B0B0C" stroke-width="2.4">
+    <circle cx="40" cy="40" r="36"/>
+    <circle cx="40" cy="40" r="28"/>
+    <circle cx="40" cy="40" r="20"/>
+    <circle cx="40" cy="40" r="6" fill="#0B0B0C" stroke="none"/>
+  </g>
+  <text x="152" y="98" fill="#0B0B0C" font-family="Inter, Arial, Helvetica, sans-serif" font-size="58" font-weight="700">OpenAURA</text>
+</svg>

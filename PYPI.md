@@ -1,4 +1,6 @@
-# Open AURA
+<p align="center">
+  <img src="https://raw.githubusercontent.com/pradelgorithm/openaura/main/brandbook/openaura-logo.svg" alt="OpenAURA logo" width="420">
+</p>
 
 [![PyPI](https://img.shields.io/pypi/v/open-aura?logo=pypi&logoColor=white)](https://pypi.org/project/open-aura/)
 [![Python](https://img.shields.io/pypi/pyversions/open-aura?logo=python&logoColor=white)](https://pypi.org/project/open-aura/)
@@ -8,7 +10,7 @@
 [![Coverage](https://codecov.io/gh/pradelgorithm/openaura/graph/badge.svg)](https://codecov.io/gh/pradelgorithm/openaura)
 [![License](https://img.shields.io/badge/License-Apache_2.0-3b82f6.svg)](https://github.com/pradelgorithm/openaura/blob/main/LICENSE)
 
-Open AURA is a CI-native Python CLI that generates recurring project briefs from
+OpenAURA is a CI-native Python CLI that generates recurring project briefs from
 delivery signals and writes markdown reports into `aura-docs/`.
 
 This page is the technical package reference. The human/product README lives in the
@@ -69,7 +71,7 @@ in your CI workflow.
 
 ## Environment Variables
 
-Open AURA reads secret values from environment variables. The config file stores only
+OpenAURA reads secret values from environment variables. The config file stores only
 the variable names.
 
 | Purpose | Default variable |
@@ -104,7 +106,7 @@ markdown to the configured output folder.
 
 ## GitHub Actions
 
-Install Open AURA in a workflow with pip:
+Install OpenAURA in a workflow with pip:
 
 ```yaml
 - uses: actions/setup-python@v6

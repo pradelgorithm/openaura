@@ -1,7 +1,9 @@
 <!-- markdownlint-disable MD033 MD041 -->
 <div align="center">
 
-<h1>AURA</h1>
+<p>
+  <img src="brandbook/openaura-logo.svg" alt="OpenAURA logo" width="420">
+</p>
 
 <p><strong>Agentic Updates, Reviews, and Accountability.</strong></p>
 
@@ -209,7 +211,7 @@ outruns manual reporting.
 
 ### 1. Install
 
-Open AURA supports Python 3.11 and newer. The CI matrix currently verifies Python
+OpenAURA supports Python 3.11 and newer. The CI matrix currently verifies Python
 3.11, 3.12, 3.13, and 3.14.
 
 ```bash

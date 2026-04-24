@@ -1,6 +1,6 @@
-# Contributing to Open AURA
+# Contributing to OpenAURA
 
-Thanks for your interest in contributing! Open AURA is small and opinionated — the rules
+Thanks for your interest in contributing! OpenAURA is small and opinionated — the rules
 below keep it that way.
 
 ## Ground rules

@@ -6,7 +6,7 @@ annotations:
   - checks:
       - pinned-dependencies
     reasons:
-      - reason: not-applicable # Open AURA is a Python library; CI intentionally resolves package metadata across supported Python versions.
+      - reason: not-applicable # OpenAURA is a Python library; CI intentionally resolves package metadata across supported Python versions.
   - checks:
       - fuzzing
     reasons:

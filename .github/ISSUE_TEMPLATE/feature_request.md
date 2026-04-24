@@ -1,6 +1,6 @@
 ---
 name: Feature request
-about: Suggest an addition or change to Open AURA
+about: Suggest an addition or change to OpenAURA
 labels: [enhancement]
 ---
 
@@ -14,9 +14,9 @@ labels: [enhancement]
 
 ## Alternatives considered
 
-## Does it fit Open AURA's scope?
+## Does it fit OpenAURA's scope?
 
-Open AURA is **stateless, CI-native, agent-generated weekly briefs**. It is not a
+OpenAURA is **stateless, CI-native, agent-generated weekly briefs**. It is not a
 dashboard, not a server, not a SaaS. Features that require persistent state, a UI,
 or a hosted service are unlikely to land.
 
