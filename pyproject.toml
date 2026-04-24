@@ -68,6 +68,7 @@ include = [
     "tests",
     "README.md",
     "MANIFESTO.md",
+    "AGENTS.md",
     "LICENSE",
     "SECURITY.md",
     "CONTRIBUTING.md",

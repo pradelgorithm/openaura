@@ -59,6 +59,23 @@ git commit -s -m "feat: ..."
 
 The CI enforces this.
 
+## AI-assisted contributions
+
+AI-assisted and agentic development is allowed, but the human contributor is accountable
+for the final contribution.
+
+- Human review is required before merge for any agentic change.
+- AI agents must not add `Signed-off-by` trailers. Only the human submitter may certify
+  the DCO.
+- Disclose substantial AI assistance in the PR body or with an `Assisted-by:` trailer,
+  for example: `Assisted-by: Codex:gpt-5.4`.
+- Review AI-generated content for correctness, tests, maintainability, security impact,
+  and Apache-2.0 license compatibility before submitting.
+- Do not submit generated code or docs that you cannot explain and maintain.
+- If the change affects authentication, secrets, CI/CD, releases, dependencies,
+  networking, file I/O, or bundled instructions, include a short security and license
+  review note in the PR.
+
 ## Signed commits
 
 We also require GPG- or Sigstore-signed commits on `main`. Set up commit signing
@@ -72,6 +89,8 @@ We also require GPG- or Sigstore-signed commits on `main`. Set up commit signing
 - [ ] Updated `CHANGELOG` entry if user-facing
 - [ ] No new deps without a rationale in the PR description
 - [ ] No changes to `aura.core.md` without maintainer sign-off
+- [ ] AI-assisted changes disclosed and reviewed by a human for security and licensing
+      impact
 
 ## Reporting security issues
 

@@ -24,7 +24,10 @@
 
 </p>
 
-<p><code>pip install open-aura</code></p>
+<p>
+<a href="https://openaura.org/">Website</a> ·
+<code>pip install open-aura</code>
+</p>
 
 <br>
 
@@ -291,6 +294,7 @@ python -m pytest
 - [`openaura/instructions/aura.md.example`](openaura/instructions/aura.md.example) —
   user-editable project context template.
 - [`MANIFESTO.md`](MANIFESTO.md) — the AURA Protocol: 10 rules for accurate repo updates.
+- [`AGENTS.md`](AGENTS.md) — coding-agent setup, checks, security, and human-review rules.
 - [`CONTRIBUTING.md`](CONTRIBUTING.md) — developer setup and PR expectations.
 - [`SECURITY.md`](SECURITY.md) — vulnerability disclosure policy.
 - [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md) — community standards.
