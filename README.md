@@ -10,8 +10,13 @@
 <p>
 
 <a href="./LICENSE"><img alt="License: Apache 2.0" src="https://img.shields.io/badge/License-Apache_2.0-3b82f6.svg"></a>
+<img alt="Install" src="https://img.shields.io/badge/pip%20install-open--aura-3b82f6?logo=pypi&logoColor=white">
 <img alt="Python 3.11+" src="https://img.shields.io/badge/python-3.11%2B-3b82f6?logo=python&logoColor=white">
 <img alt="Status: alpha" src="https://img.shields.io/badge/status-alpha-orange">
+<a href="https://github.com/pradelgorithm/openaura/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/pradelgorithm/openaura/actions/workflows/ci.yml/badge.svg"></a>
+<a href="https://github.com/pradelgorithm/openaura/actions/workflows/codeql.yml"><img alt="CodeQL" src="https://github.com/pradelgorithm/openaura/actions/workflows/codeql.yml/badge.svg"></a>
+<a href="https://securityscorecards.dev/viewer/?uri=github.com/pradelgorithm/openaura"><img alt="OpenSSF Scorecard" src="https://api.securityscorecards.dev/projects/github.com/pradelgorithm/openaura/badge"></a>
+<a href="https://codecov.io/gh/pradelgorithm/openaura"><img alt="Coverage" src="https://codecov.io/gh/pradelgorithm/openaura/graph/badge.svg"></a>
 <a href="https://docs.astral.sh/ruff/"><img alt="Ruff" src="https://img.shields.io/badge/lint-ruff-261230?logo=ruff"></a>
 <a href="http://mypy-lang.org/"><img alt="Checked with mypy" src="https://img.shields.io/badge/mypy-strict-blue"></a>
 <a href="https://coderabbit.ai"><img alt="CodeRabbit" src="https://img.shields.io/badge/CodeRabbit-reviewed-ff69b4"></a>
@@ -19,7 +24,7 @@
 
 </p>
 
-<sub>Badges for PyPI, CI, CodeQL, OpenSSF Scorecard, and Codecov activate once the repo is public and the package is published.</sub>
+<p><code>pip install open-aura</code></p>
 
 <br>
 
@@ -201,7 +206,7 @@ outruns manual reporting.
 
 ### 1. Install
 
-OpenAURA supports Python 3.11 and newer. The CI matrix currently verifies Python
+Open AURA supports Python 3.11 and newer. The CI matrix currently verifies Python
 3.11, 3.12, 3.13, and 3.14.
 
 ```bash

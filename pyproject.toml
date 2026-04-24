@@ -10,7 +10,7 @@ readme = "README.md"
 requires-python = ">=3.11"
 license = "Apache-2.0"
 license-files = ["LICENSE"]
-authors = [{ name = "OpenAURA contributors" }]
+authors = [{ name = "Open AURA contributors" }]
 keywords = ["ai", "agents", "devops", "pydantic-ai", "ci", "reporting", "openai", "anthropic"]
 classifiers = [
     "Development Status :: 3 - Alpha",

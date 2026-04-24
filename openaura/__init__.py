@@ -1,4 +1,4 @@
-"""OpenAURA — Agentic Updates, Reviews, and Accountability."""
+"""Open AURA — Agentic Updates, Reviews, and Accountability."""
 
 from __future__ import annotations
 

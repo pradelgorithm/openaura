@@ -7,7 +7,7 @@ project: "my-project"
 trigger: weekly
 schedule: "friday-5pm"     # documentation only — the real cron lives in your CI workflow
 
-# Pydantic AI model string. OpenAURA uses the same typed output schemas for
+# Pydantic AI model string. Open AURA uses the same typed output schemas for
 # Anthropic and OpenAI responses.
 # - Anthropic: set ANTHROPIC_API_KEY in CI
 # - OpenAI: set OPENAI_API_KEY in CI

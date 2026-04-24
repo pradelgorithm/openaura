@@ -43,6 +43,15 @@ jobs:
         run: python -m bandit -r openaura -ll
       - name: Pytest
         run: python -m pytest --cov=openaura --cov-report=xml --cov-fail-under=80
+      - name: Upload coverage to Codecov
+        if: matrix.python-version == '3.11'
+        uses: codecov/codecov-action@75cd11691c0faa626561e295848008c8a7dddffe  # v5.5.4
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          files: coverage.xml
+          flags: py311
+          name: py311
+          fail_ci_if_error: false
 
   audit:
     name: pip-audit

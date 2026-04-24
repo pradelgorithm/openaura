@@ -1,0 +1,21 @@
+annotations:
+  - checks:
+      - code-review
+    reasons:
+      - reason: remediated # main now requires PR review, Code Owner review, and latest-push approval.
+  - checks:
+      - pinned-dependencies
+    reasons:
+      - reason: not-applicable # Open AURA is a Python library; CI intentionally resolves package metadata across supported Python versions.
+  - checks:
+      - fuzzing
+    reasons:
+      - reason: not-applicable # Current inputs are typed API fixtures/config models covered by unit tests, not binary/parser surfaces.
+  - checks:
+      - maintained
+    reasons:
+      - reason: not-applicable # The repository is new; maintenance age will improve naturally after the 90-day window.
+  - checks:
+      - cii-best-practices
+    reasons:
+      - reason: not-detected # Best Practices badge registration is a manual maintainer step outside the repository.
