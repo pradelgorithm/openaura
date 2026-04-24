@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "open-aura"
-version = "0.1.1"
+version = "0.1.2"
 description = "Agentic Updates, Reviews, and Accountability — CI-native weekly project briefs powered by Pydantic AI."
 readme = "PYPI.md"
 requires-python = ">=3.11"

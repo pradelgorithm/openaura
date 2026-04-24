@@ -12,7 +12,7 @@
 <p>
 
 <a href="./LICENSE"><img alt="License: Apache 2.0" src="https://img.shields.io/badge/License-Apache_2.0-3b82f6.svg"></a>
-<img alt="Install" src="https://img.shields.io/badge/pip%20install-open--aura-3b82f6?logo=pypi&logoColor=white">
+<a href="https://pypi.org/project/open-aura/"><img alt="Install" src="https://img.shields.io/badge/pip%20install-open--aura-3b82f6?logo=pypi&logoColor=white"></a>
 <img alt="Python 3.11+" src="https://img.shields.io/badge/python-3.11%2B-3b82f6?logo=python&logoColor=white">
 <img alt="Status: alpha" src="https://img.shields.io/badge/status-alpha-orange">
 <a href="https://github.com/pradelgorithm/openaura/actions/workflows/ci.yml"><img alt="CI" src="https://github.com/pradelgorithm/openaura/actions/workflows/ci.yml/badge.svg"></a>
