@@ -6,7 +6,7 @@ build-backend = "hatchling.build"
 name = "open-aura"
 version = "0.1.1"
 description = "Agentic Updates, Reviews, and Accountability — CI-native weekly project briefs powered by Pydantic AI."
-readme = "README.md"
+readme = "PYPI.md"
 requires-python = ">=3.11"
 license = "Apache-2.0"
 license-files = ["LICENSE"]
@@ -67,6 +67,7 @@ include = [
     "openaura",
     "tests",
     "README.md",
+    "PYPI.md",
     "MANIFESTO.md",
     "AGENTS.md",
     "LICENSE",
