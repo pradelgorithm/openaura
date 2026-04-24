@@ -18,6 +18,7 @@
 - [ ] Commits signed off (`-s`) and signed (GPG or Sigstore)
 - [ ] No secrets committed (double-check)
 - [ ] No raw LLM calls outside Pydantic AI
+- [ ] If AI-assisted: disclosed, human-reviewed, and checked for security/licensing impact
 - [ ] If touching `aura.core.md`: rationale included below
 
 ## Additional notes

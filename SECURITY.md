@@ -65,6 +65,24 @@ Open AURA runs in CI and reads signals from external APIs. It:
 If you find a path where a secret leaks to logs, output briefs, or any third party,
 that is **always in scope** and qualifies for a security advisory regardless of severity.
 
+## Agentic development security expectations
+
+Open AURA allows AI-assisted and agentic development, but generated changes are never
+accepted on trust alone. A human contributor and human reviewer must review agentic
+changes for security and licensing impact before merge.
+
+For agentic changes, reviewers should pay special attention to:
+
+- secret handling, logging, and redaction paths
+- connector authentication and external API calls
+- CI/CD, release, provenance, and signing workflows
+- new or changed dependencies, including license compatibility
+- file I/O, shell execution, network access, and generated templates
+
+AI agents must not certify the DCO or make license assertions on behalf of a human
+contributor. The human submitter remains responsible for reviewing generated code,
+ensuring Apache-2.0 compatibility, and documenting any relevant attribution or notices.
+
 ## Hardening this project ships with
 
 - CodeQL scans on every push and PR.
